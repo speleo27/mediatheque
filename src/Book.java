@@ -7,6 +7,14 @@ public class Book {
      private String category; //sf , roman ,....
     private String editor;
 
+
+    // constructeur
+
+    public Book() {
+        System.out.println("je suis entrain de construire un objet Livre avec le 1 constructeur");
+    }
+
+
     public Book(String title, String author, int yearOfPublication, int numberPage, String description, String category, String editor) {
         this.title = title;
         this.author = author;
@@ -16,6 +24,9 @@ public class Book {
         this.category = category;
         this.editor = editor;
     }
+
+
+    //méthodes
 
     public String getTitle() {
         return title;
@@ -73,7 +84,14 @@ public class Book {
         this.editor = editor;
     }
 
-    public void getBook(){
-        System.out.println(this.getTitle()+" ,"+this.getAuthor()+" ,"+ this.getYearOfPublication()+" ,"+this.getDescription());
+    public void showBook(){
+        System.out.println("titre : "+this.getTitle()+", auteur: "+this.getAuthor()+", Date de parution : "+ this.getYearOfPublication()+", description"+this.getDescription());
+    }
+    public void showIfRoman(){
+       if (this.getCategory() == "roman"){
+        System.out.println("c'est un roman");
+       }else{
+           System.out.println("ce n'est pas la bonne catégorie");
+       }
     }
 }
