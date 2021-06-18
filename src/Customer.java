@@ -1,17 +1,21 @@
+import java.util.ArrayList;
+
 public class Customer {
     private String name;
     private String lastname;
     private int age;
-    private String adress;
+    private String address;
     private int phone;
+    ArrayList<Book> booksRental;
 
 
-    public Customer(String name, String lastname, int age, String adress, int phone) {
+    public Customer(String name, String lastname, int age, String address, int phone ) {
         this.name = name;
         this.lastname = lastname;
         this.age = age;
-        this.adress = adress;
+        this.address = address;
         this.phone = phone;
+        this.booksRental = new ArrayList<>();
     }
 
     public String getName() {
@@ -38,12 +42,12 @@ public class Customer {
         this.age = age;
     }
 
-    public String getAdress() {
-        return adress;
+    public String getAddress() {
+        return address;
     }
 
-    public void setAdress(String adress) {
-        this.adress = adress;
+    public void setAddress(String adress) {
+        this.address = adress;
     }
 
     public int getPhone() {
@@ -56,4 +60,5 @@ public class Customer {
     public void showCustomer(){
         System.out.println(this.getName()+", "+this.getLastname()+", "+this.getPhone());
     }
+
 }

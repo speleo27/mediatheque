@@ -9,10 +9,11 @@ public class Rental {
       this.dateRental = dateRental;
       this.customer = customer;
       this.book = book;
+      customer.booksRental.add(book);
    }
 
    public Customer getCustomer() {
-      return customer;
+      return  customer;
    }
 
    public void setCustomer(Customer customer) {
@@ -26,4 +27,11 @@ public class Rental {
    public void setBook(Book book) {
       this.book = book;
    }
+
+   public void showRental(){
+      System.out.println("le livre : "+this.getBook()+" a été emprunté par: "+this.getCustomer());
+
+   }
+
+
 }
